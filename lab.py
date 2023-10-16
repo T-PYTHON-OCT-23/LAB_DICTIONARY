@@ -20,7 +20,9 @@ else :
 
 numbers=[5, 0, 34, 9, 0, 13, 8]
 def list_rearranges(numbers):
-    numbers.sort(reverse=True)
-    print(numbers)
-list_rearranges(numbers)
-    
+    numbers1=[x for x in numbers if x!=0]
+    numbers2=[x for x in numbers if x==0]
+    numbers1.extend(numbers2)
+    return numbers1
+
+print(list_rearranges(numbers))   

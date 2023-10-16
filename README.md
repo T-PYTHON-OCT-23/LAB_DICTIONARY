@@ -30,7 +30,7 @@ You can follow the table below:
 
 ### Exercise: Weather Data Aggregation
 
-**Objective:** ,
+**Objective:** 
 
 #### Requirements:
 
