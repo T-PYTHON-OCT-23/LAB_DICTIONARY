@@ -28,4 +28,6 @@ def fuctioList(items):
     
 print("This list: ")
 print(fuctioList([5, 0, 34, 9, 0, 13, 8]))
+
+
     
