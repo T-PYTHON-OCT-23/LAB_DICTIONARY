@@ -30,7 +30,7 @@ You can follow the table below:
 
 ### Exercise: Weather Data Aggregation
 
-**Objective:** Write a Python program that aggregates weather data for different cities and provides weather data based on user queries.
+**Objective:** ,
 
 #### Requirements:
 

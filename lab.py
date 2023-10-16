@@ -13,7 +13,7 @@ if number in phone_book:
     print('The owner of the number',phone_book[number])
 elif (len(number) < 10 or len(number) >10):
     print("This is invalid number")
-elif number.isalnum()==True :
+elif number.isdigit()!=True :
     print("This is invalid number")
 else :
     print("Sorry, the number is not found")
