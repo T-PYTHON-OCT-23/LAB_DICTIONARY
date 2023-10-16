@@ -28,10 +28,8 @@ def zerolist_(list_):
     list_ = sorted(list_, reverse=True) 
     # Check if there are any zeros in the list
     if 0 in list_:
-        print("There are zeros in the list")
         # While the last element is not 0, move it to the end
         while list_[-1] != 0:
-            print(list_)
             list_.insert(0,list_.pop(-1))
     
     return list_
