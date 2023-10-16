@@ -6,9 +6,9 @@ while inputdata_ != "exit":
     inputtemp_ = input("Enter temp: ")
     inputhumidity_ = input("Enter humidity: ")
     inputweather_ = input("Enter weather: ")
-    dict_[inputdata_] = [inputdate_, inputtemp_, inputhumidity_, inputweather_]
-    
-    
+    temp_={inputdata_, inputdate_, inputtemp_, inputhumidity_, inputweather_}
+    dict_.update({inputdata_:temp_})
+        
 query_ = input("Enter city name to query: ")
 if query_ in dict_:
     print(dict_[query_])
@@ -17,10 +17,11 @@ if query_ in dict_:
 update_ = input("Enter city name to update: ")
 
 if update_ in dict_:
-    dict_[update_][0] = input("Enter date: ")
-    dict_[update_][1] = input("Enter temp: ")
-    dict_[update_][2] = input("Enter humidity: ")
-    dict_[update_][3] = input("Enter weather: ")
+    data = input("Enter date: ")
+    temp = input("Enter temp: ")
+    hum = input("Enter humidity: ")
+    weather = input("Enter weather: ")
+    dict_.update({update_:[data, temp, hum, weather]})
     
 print(dict_)
 
