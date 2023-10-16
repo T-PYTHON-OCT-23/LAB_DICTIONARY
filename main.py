@@ -25,11 +25,18 @@ else:
         
     
 def zerolist_(list_):
-    list_=sorted(list_)
-    list_=list_[::-1]
+    list_ = sorted(list_, reverse=True) 
+    # Check if there are any zeros in the list
+    if 0 in list_:
+        print("There are zeros in the list")
+        # While the last element is not 0, move it to the end
+        while list_[-1] != 0:
+            print(list_)
+            list_.insert(0,list_.pop(-1))
+    
     return list_
     
-test = [5, 0, 34, 9, 0, 13, 8]
+test = [5, 0, 34, 9, 0, 13, 8,-1]
 
 print(zerolist_(test))
 
