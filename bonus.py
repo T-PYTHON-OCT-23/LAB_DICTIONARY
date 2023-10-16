@@ -39,14 +39,21 @@ weather = {
 
 user_input = input("Enter city name to see the weather: ")
 if not user_input in weather:
-    print(f"{user_input} is not found")
+    print(f"Sorry we don't have the info for {user_input}")
     choisen = int(input("If you want to insert city enter 1, If you don't enter 2: "))
     if choisen == 1:
         city_name = input("If you want to add a new city enter the name: ")
         date = input("If you want to add date to a new city enter the data: ")
+        temperature = input("If you want to add temperature to a new city enter the data: ")
         humidity = input("If you want to add humidity a new city enter the humidity: ")
-        huweather_conditionmidity = input("If you want to add weather condition to a new city enter the condition. Hint: sunny,rainy: ")
+        weather_condition = input("If you want to add weather condition to a new city enter the condition. Hint: sunny,rainy: ")
     else:
         print("Thank for your time")
 
+def fetch_data(city,date,temperature,humidity,weather_condition):
+    weather.update({city:{"data":date,"temperature":temperature,"humidity":humidity,"weather_condition":weather_condition}})
+    return weather
 
+
+fetch_data(city_name,date,temperature,humidity,weather_condition)
+print(weather)
