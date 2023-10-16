@@ -2,42 +2,49 @@ weather = {
     "Riyadh":{
         "date":"2023/12/1",
         "temperature":"45",
-        "humidity":True,
+        "humidity":"yes",
         "weather condition":"sunny"
         },
     "Arar":{
         "date":"2023/12/1",
         "temperature":"23",
-        "humidity":False,
+        "humidity":"no",
         "weather condition":"sunny"
         },
     "Rafha":{
         "date":"2023/12/1",
         "temperature":"22",
-        "humidity":True,
+        "humidity":"yes",
         "weather condition":"rainy"
         },
     "Haiel":{
         "date":"2023/12/1",
         "temperature":"15",
-        "humidity":True,
+        "humidity":"yes",
         "weather condition":"rainy"
         },
     "Damam":{
         "date":"2023/12/1",
         "temperature":"55",
-        "humidity":True,
+        "humidity":"no",
         "weather condition":"sunny"
         },
     "Abha":{
         "date":"2023/12/1",
         "temperature":"5",
-        "humidity":True,
+        "humidity":"yes",
         "weather condition":"rainy"
         }
 }
-
 user_input = input("Enter city name to see the weather: ")
+
+def fetch_data(city,date,temperature,humidity,weather_condition):
+    weather.update({city:{"data":date,"temperature":temperature,"humidity":humidity,"weather_condition":weather_condition}})
+    print("Add city successfully")
+    print(f"{user_input}:{weather[user_input]}")
+    return weather
+
+
 if not user_input in weather:
     print(f"Sorry we don't have the info for {user_input}")
     choisen = int(input("If you want to insert city enter 1, If you don't enter 2: "))
@@ -53,7 +60,3 @@ if not user_input in weather:
 else:
     data = weather[user_input]
     print(f"The weather in {user_input} on {data['date']} is {data['temperature']} and the weather condition is {data['weather condition']}")
-
-def fetch_data(city,date,temperature,humidity,weather_condition):
-    weather.update({city:{"data":date,"temperature":temperature,"humidity":humidity,"weather_condition":weather_condition}})
-    return weather
