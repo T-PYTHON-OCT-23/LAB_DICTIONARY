@@ -12,3 +12,18 @@ if input_user in my_d:
     print (f"This is invalid number:{input_user} is {my_d[input_user]}")
 else:
     print("Sorry, the number is not found")
+
+
+l:[5, 0, 34, 9, 0, 13, 8]
+def lis(l):
+    for n in l:
+        if n ==0:
+          l.remove(n)
+          l.append(n)
+
+    return l
+print(lis([5, 0, 34, 9, 0, 13, 8]))
+
+
+
+
