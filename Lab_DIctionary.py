@@ -9,7 +9,7 @@ phone_book ={
   "0567917077":"Layla" }
 user_number = input("Enter your number: ")
 if user_number in phone_book:
-    print(f"the owner for  {user_number}  is {phone_book[user_number]} ")
+    print(f"theowm for  {user_number}  is {phone_book[user_number]} ")
 else:
     print(f"Sorry, the number is not found {user_number}")  
 #for n in phone_book:

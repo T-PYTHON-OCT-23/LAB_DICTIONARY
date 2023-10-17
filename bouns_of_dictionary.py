@@ -16,7 +16,7 @@ while n >= 0:
         print(" ")
         weather_condition = input("what is the weather condition in that city (e.g., sunny, rainy): ")
     n +=1
-    weather[city] = {today_date,temperature,humidity,weather_condition}
+    weather[city] = {(today_date,temperature,humidity,weather_condition)}
 new_weather= weather 
 print(" ")  
 user_city = input("Enter a city for quary the weather data: ")
@@ -40,7 +40,7 @@ if user_city in weather:
     print(" ")
 key_1= input("ente char: (a) to make the update or press enter: ") 
 if  key_1 == "a":
-    new_weather.update({city : {update_date,update_temperature,update_humidity,update_weather_condition}})
+    new_weather.update({city : {(update_date,update_temperature,update_humidity,update_weather_condition)}})
     print(" ")
 key_2 = input("enter word: (delete) to make the delete or press enter: ")
 if key_2 == "delete":  
