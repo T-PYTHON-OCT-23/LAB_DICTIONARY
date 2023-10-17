@@ -1,15 +1,15 @@
 
 phone_book ={
- "Amal "    : "0568323222", 
- "Mohammed" : "0522222232" ,
- "Khadijah" : "0532335983", 
- "Abdullah"  : "0545341144" ,
- "Rawan"    : "0545534556" ,  
- "Faisal"   : "0560664566" , 
- "Layla"    : "0567917077" }
+ "0568323222":"Amal "  , 
+  "0522222232":"Mohammed" ,
+ "0532335983":"Khadijah" , 
+"0545341144":"Abdullah" ,
+"0545534556":"Rawan"  ,  
+"0560664566":"Faisal" , 
+  "0567917077":"Layla" }
 user_number = input("Enter your number: ")
 if user_number in phone_book:
-    print(f"the number for  {user_number}  is {phone_book[user_number]} ")
+    print(f"the owner for  {user_number}  is {phone_book[user_number]} ")
 else:
     print(f"Sorry, the number is not found {user_number}")  
 #for n in phone_book:
