@@ -18,11 +18,10 @@ l:[5, 0, 34, 9, 0, 13, 8]
 def lis(l):
     for n in l:
         if n ==0:
-          l.remove(n)
-          l.append(n)
-
-    return l
-print(lis([5, 0, 34, 9, 0, 13, 8]))
+          l.sort(l)
+       
+          return l
+print(lis())
 
 
 
