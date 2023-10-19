@@ -1,41 +1,34 @@
-
-
-
-'''Q1'''
-
 number_book = {
-    "0568323222" : "abdoullah",
-    "0522222232" : "ahmed",
-    "0532335983" : "turki" ,
-    "0545341144" : "amal" ,
-    "0557407242" : "naif"
-    }
+    "0568323222" : "Amal" ,
+    "0522222232" : "Mohammed" ,
+    "0532335983" : "Khadijah" ,
+    "0545341144" : "Abdullah" ,
+    "0545534556" : "Rawan" ,
+    "0560664566" : "Faisal" ,
+    "0567917077" : "Layla"
+}
 
+search = input("Enter the number:  ")
 
-user_input = input("Enter num: ")
-if  user_input in number_book:
-    print(f"this name {number_book[user_input]}")
-elif len(user_input) !=10:
+if len(search)<10 and not search.isnumeric() :
     print("This is invalid number")
-elif user_input.isnumeric() != True:
-    print("This is invalid number")
-else:
-    print("Sorry, the number is not found")
     
+    if not search in number_book:
+        print("Sorry, the number is not found")
 
-'''Q2'''
+print("_"*20)
 
-Number =  [5, 0, 34, 9, 0, 13, 8, -5]
+def receives_list (my_list:list) -> list :
+    new_list = sorted(my_list, reverse=True) 
+    return new_list
 
-def my_list(lst1 )-> list:
-    lst1.sort()
-    lst1_without_zeros = []
-    for n in lst1:
-        if n != 0:
-            lst1_without_zeros.append(n)
-    lst1_without_zeros.append(0)
-    lst1 = lst1_without_zeros
-    return lst1
 
-new_lis = my_list(Number)
-print(new_lis)
+                
+numbers=[5, 0, 34, 9, 0, 13, 8]        
+
+print(receives_list(numbers))
+
+              
+            
+
+    
